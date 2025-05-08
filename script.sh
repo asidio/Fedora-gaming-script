@@ -4,12 +4,18 @@ RED="\033[0;31m"
 GREEN="\033[0;32m"
 BLUE="\033[0;34m"
 NO_COL="\033[0m"
-echo -e "${BLUE}Updating...${NO_COL}"
+echo -e "${BLUE}==============================${NO_COL}"
+echo -e "${BLUE}      Updating System...      ${NO_COL}"
+echo -e "${BLUE}==============================${NO_COL}"
 sudo dnf update --refresh
-echo -e "${BLUE}Installing utilities...${NO_COL}"
+echo -e "${BLUE}==============================${NO_COL}"
+echo -e "${BLUE}    Installing utilities...   ${NO_COL}"
+echo -e "${BLUE}==============================${NO_COL}"
 sudo dnf install -y xdotool neofetch btop
 #gaming specific programs
-echo -e "${BLUE}Installing gaming apps...${NO_COL}"
+echo -e "${BLUE}==============================${NO_COL}"
+echo -e "${BLUE}   Installing gaming apps...  ${NO_COL}"
+echo -e "${BLUE}==============================${NO_COL}"
 echo -e "${BLUE}Installing steam for fedora version: $(rpm -E %fedora)...${NO_COL}"
 sudo dnf install -y https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
 
@@ -20,9 +26,13 @@ echo -e "${BLUE}Disabling composition...${NO_COL}"
 xdotool key shift+alt+F12
 
 #gamemode 
-echo -e "${BLUE}Installing gamemode dependencies...${NO_COL}"
+echo -e "${BLUE}=========================================${NO_COL}"
+echo -e "${BLUE}   Installing gamemode dependencies...   ${NO_COL}"
+echo -e "${BLUE}=========================================${NO_COL}"
 sudo dnf install -y meson systemd-devel pkg-config git dbus-devel inih-devel
-echo -e "${BLUE}Installing gamemode...${NO_COL}"
+echo -e "${BLUE}==============================${NO_COL}"
+echo -e "${BLUE}    Installing gamemode...    ${NO_COL}"
+echo -e "${BLUE}==============================${NO_COL}"
 if git clone https://github.com/FeralInteractive/gamemode.git; then
     echo "${GREEN}Gamemode successfully cloned${NO_COL}"
 else 
@@ -44,5 +54,8 @@ if ! command -v wget &> /dev/null; then
     sudo dnf install -y wget
 fi
 wget https://raw.githubusercontent.com/FeralInteractive/gamemode/refs/heads/master/example/gamemode.ini ~/.config/gamemode.ini
-echo -e "${GREEN}Done!${NO_COL}"
+echo -e "${GREEN}===========================${NO_COL}"
+echo -e "${GREEN}            Done!          ${NO_COL}"
+echo -e "${GREEN}===========================${NO_COL}"
 echo -e "type 'gamemoded -t' to verify installation"
+echo -e "Enjoy😁"
