@@ -7,7 +7,7 @@ NO_COL="\033[0m"
 echo -e "${BLUE}==============================${NO_COL}"
 echo -e "${BLUE}      Updating System...      ${NO_COL}"
 echo -e "${BLUE}==============================${NO_COL}"
-sudo dnf update --refresh
+sudo dnf update --refresh -y
 echo -e "${BLUE}==============================${NO_COL}"
 echo -e "${BLUE}    Installing utilities...   ${NO_COL}"
 echo -e "${BLUE}==============================${NO_COL}"
