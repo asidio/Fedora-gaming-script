@@ -11,7 +11,7 @@ sudo dnf update --refresh -y
 echo -e "${BLUE}==============================${NO_COL}"
 echo -e "${BLUE}    Installing utilities...   ${NO_COL}"
 echo -e "${BLUE}==============================${NO_COL}"
-sudo dnf install -y xdotool gcc fastfetch btop
+sudo dnf install -y xdotool gcc xz fastfetch btop
 #gaming specific programs
 echo -e "${BLUE}==============================${NO_COL}"
 echo -e "${BLUE}   Installing gaming apps...  ${NO_COL}"
