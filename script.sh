@@ -59,5 +59,5 @@ wget https://raw.githubusercontent.com/FeralInteractive/gamemode/refs/heads/mast
 echo -e "${GREEN}===========================${NO_COL}"
 echo -e "${GREEN}            Done!          ${NO_COL}"
 echo -e "${GREEN}===========================${NO_COL}"
-echo -e "type 'gamemoded -t' to verify installation"
-echo -e "Enjoy😁"
+echo -e "type 'gamemoded -t' to verify installation\n"
+echo -e "${GREEN}Enjoy!😁${NO_COL}"
