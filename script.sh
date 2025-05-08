@@ -36,9 +36,9 @@ echo -e "${BLUE}==============================${NO_COL}"
 echo -e "${BLUE}    Installing gamemode...    ${NO_COL}"
 echo -e "${BLUE}==============================${NO_COL}"
 if git clone https://github.com/FeralInteractive/gamemode.git; then
-    echo "${GREEN}Gamemode successfully cloned${NO_COL}"
+    echo -e "${GREEN}Gamemode successfully cloned${NO_COL}"
 else 
-    echo "${RED}Error cloning gamemode${NO_COL}"
+    echo -e "${RED}Error cloning gamemode${NO_COL}"
     exit 1
 fi
 cd gamemode
@@ -46,13 +46,13 @@ git checkout 1.8.2 # omit to build the master branch
 echo -e "${BLUE}Running bootstrap script...${NO_COL}"
 ./bootstrap.sh
 if command -v gamemoded &> /dev/null; then
-    echo "${GREEN}Gamemoded correctly installed${NO_COL}"
+    echo -e "${GREEN}Gamemoded correctly installed${NO_COL}"
 else
-    echo "${RED}Errore gamemoded can't be installed${NO_COL}"
+    echo -e "${RED}Errore gamemoded can't be installed${NO_COL}"
     exit 1
 fi
 if ! command -v wget &> /dev/null; then
-    echo "${RED}wget not found, installing it now...${NO_COL}"
+    echo -e "${RED}wget not found, installing it now...${NO_COL}"
     sudo dnf install -y wget
 fi
 wget https://raw.githubusercontent.com/FeralInteractive/gamemode/refs/heads/master/example/gamemode.ini ~/.config/gamemode.ini
