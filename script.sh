@@ -11,7 +11,7 @@ sudo dnf update --refresh -y
 echo -e "${BLUE}==============================${NO_COL}"
 echo -e "${BLUE}    Installing utilities...   ${NO_COL}"
 echo -e "${BLUE}==============================${NO_COL}"
-sudo dnf install -y xdotool neofetch btop
+sudo dnf install -y xdotool gcc fastfetch btop
 #gaming specific programs
 echo -e "${BLUE}==============================${NO_COL}"
 echo -e "${BLUE}   Installing gaming apps...  ${NO_COL}"
@@ -19,10 +19,12 @@ echo -e "${BLUE}==============================${NO_COL}"
 echo -e "${BLUE}Installing steam for fedora version: $(rpm -E %fedora)...${NO_COL}"
 sudo dnf install -y https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
 
-sudo dnf install -y steam lutris heroic
+sudo dnf install -y steam lutris
+sudo dnf copr enable atim/heroic-games-launcher
+sudo dnf install -y heroic-games-launcher-bin
 
 #disable composition
-echo -e "${BLUE}Disabling composition...${NO_COL}"
+echo -e "${GREEN}Composition disabled.${NO_COL}"
 xdotool key shift+alt+F12
 
 #gamemode 
